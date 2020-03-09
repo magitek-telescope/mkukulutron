@@ -1,0 +1,49 @@
+{
+  "name": "mkukulutron",
+  "version": "0.3.2",
+  "main": "app/main.js",
+  "private": true,
+  "repository": "ssh://git@github.com/potato4d/mkukulutron.git",
+  "author": "HANATANI Takuma <mail@potato4d.me>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ./app/main.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "format": "prettier './src/**/*.{js,ts}' --write",
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage"
+  },
+  "build": {
+    "productName": "mkukulutron",
+    "appId": "jp.elevenback.mkukulutron",
+    "mac": {
+      "extendInfo": {
+        "LSUIElement": 1
+      }
+    }
+  },
+  "dependencies": {
+    "@types/semver": "^6.0.0",
+    "electron-log": "^4.0.6",
+    "electron-updater": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "^24.0.5",
+    "@types/jsdom": "^12.2.2",
+    "@types/node": "^11.9.4",
+    "codecov": "^3.2.0",
+    "electron": "^8.0.1",
+    "electron-builder": "^22.3.2",
+    "jest": "^23.0.0",
+    "jsdom": "^13.2.0",
+    "prettier": "^1.16.4",
+    "standard-version": "^5.0.0",
+    "to-ico-cli": "^1.0.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.3"
+  }
+}
